@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>License Plate Checker</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700|Roboto:400,500" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="head">
+        <h1>Singapore License Plate Checksum</h1>
+      </div>
+
+      <div class="info">
+        <p>License plates are verified using a checksum. Click on <a href="https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Singapore#Checksum">this Wikipedia link</a> to find out how it works.</p>
+        <p class="asterisk">Note: for numbers shorter than 4, add zeroes before number (e.g. enter SBS12A as SBS0012A)</p>
+      </div>
+
+      <div class="isLicenseCorrect">
+        <h2>Is this license plate valid?</h2>
+        <p>Enter license plate to see if it's legit.</p>
+        <form onsubmit="isLicenseCorrect(); return false;">
+          <input type="text" name="licensePlate" placeholder="e.g. SBS1234A">
+        </form>
+      </div>
+
+      <div class="findLastLetter">
+        <h2>What is the last letter?</h2>
+        <p>Enter prefix and numbers, get the last letter!</p>
+        <form onsubmit="findLastLetter(); return false;">
+          <input type="text" name="incompletePlate" placeholder="e.g. SMH7890">
+        </form>
+      </div>
+
+      <div class="isCorrectResult">
+        <h3 id="isAns"></h3>
+      </div>
+
+      <div class="findResult">
+        <h3 id="findAns"></h3>
+      </div>
+
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
